@@ -8,8 +8,8 @@
   "scripts": {
     "install:ci": "bash scripts/install-pnpm.sh",
     "dev": "vinext dev --port 5173",
-    "build": "vinext build",
-    "start": "vinext start --port 5173",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint app components lib",
     "typecheck": "tsc --noEmit"
   },
