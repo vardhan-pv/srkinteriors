@@ -18,21 +18,21 @@ interface TransformationPair {
 const TRANSFORMATIONS: TransformationPair[] = [
   {
     id: "proj-1",
-    title: "Project 01 — Marble Bedroom Suite",
-    category: "Full Bedroom Turnkey",
+    title: "Project 01 — Modern Living Room Transformation",
+    category: "Full Living Room Turnkey",
     location: "Chintamani Site",
-    beforeImg: "/images1/IMG_5987.JPG.jpeg",
-    afterImg: "/images1/IMG_5953.JPG.jpeg",
-    description: "Platform bed constructed with premium marble cladding, built-in mirror unit, and designer butterfly hardware — delivered turnkey.",
+    beforeImg: "/images/before-living.jpg",
+    afterImg: "/images/after-living.jpg",
+    description: "Complete living room makeover featuring custom wood panelling, architectural false ceiling lighting, marble flooring, and luxury seating.",
   },
   {
     id: "proj-2",
-    title: "Project 02 — False Ceiling & TV Unit",
-    category: "Living Room & Ceiling",
-    location: "Karnataka Project",
-    beforeImg: "/images1/IMG_5961.JPG.jpeg",
-    afterImg: "/images1/IMG_6233.JPG.jpeg",
-    description: "Custom dark teak wood panelling with LED-lit false ceiling, marble flooring, and structured cove lighting — all in-house execution.",
+    title: "Project 02 — Modular Kitchen Transformation",
+    category: "Kitchen & Cabinetry",
+    location: "Karnataka Site",
+    beforeImg: "/images/before-kitchen.jpg",
+    afterImg: "/images/after-kitchen.jpg",
+    description: "Transformation of raw kitchen space into a high-gloss modular kitchen with seamless acrylic cabinets, stone countertop, and soft-close hardware.",
   },
 ];
 
