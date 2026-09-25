@@ -48,11 +48,11 @@ export function SRKReviews() {
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
               <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
               <span>TESTIMONIALS</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1C1B18]">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-[-0.015em] text-[#1C1B18]">
               What Our Clients Say
             </h2>
           </div>
@@ -62,10 +62,9 @@ export function SRKReviews() {
               href={SRK_BUSINESS.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#8A795E] hover:text-[#1C1B18] transition-colors mr-2 hidden sm:inline-flex"
+              className="inline-flex items-center gap-2 font-sans text-xs sm:text-sm font-medium tracking-wide text-[#8A795E] hover:text-[#1C1B18] transition-colors mr-2 hidden sm:inline-flex"
             >
-              <span>View All Testimonials on Google Maps</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>View All Testimonials on Google Maps ↗</span>
             </a>
 
             {/* Slider Navigation Buttons */}
@@ -106,7 +105,7 @@ export function SRKReviews() {
                 <Quote className="w-8 h-8 text-[#E6DEC8] rotate-180" />
 
                 {/* Review Quote Text */}
-                <p className="text-xs sm:text-sm text-[#3D3830] font-sans leading-relaxed italic">
+                <p className="text-[15px] sm:text-base text-[#3D3830] font-sans leading-[1.7] italic">
                   &ldquo;{review.quote}&rdquo;
                 </p>
               </div>
@@ -114,8 +113,8 @@ export function SRKReviews() {
               {/* Customer Info & Stars (No Profile Photo) */}
               <div className="pt-4 border-t border-[#F2EDE4] flex items-center justify-between gap-4">
                 <div>
-                  <h4 className="font-serif text-sm sm:text-base text-[#1C1B18] font-semibold">{review.name}</h4>
-                  <p className="text-[11px] text-[#7A6E5D] font-sans line-clamp-1">{review.role}</p>
+                  <h4 className="font-serif text-base text-[#1C1B18] font-semibold">{review.name}</h4>
+                  <p className="text-xs text-[#7A6E5D] font-sans line-clamp-1">{review.role}</p>
                 </div>
 
                 {/* 5 Stars */}

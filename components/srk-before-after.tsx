@@ -126,14 +126,14 @@ export function SRKBeforeAfter() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5 mb-12">
-          <div className="inline-flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+          <div className="inline-flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
             <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
             <span>REAL TRANSFORMATIONS</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#181713]">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-[-0.015em] text-[#181713]">
             See the Transformation
           </h2>
-          <p className="text-sm sm:text-base text-[#4A4540] font-sans leading-relaxed">
+          <p className="text-[15px] sm:text-base text-[#4A4540] font-sans leading-[1.7]">
             Explore how spaces change from unfinished or existing interiors into completed SRK Interiors projects.
           </p>
         </div>

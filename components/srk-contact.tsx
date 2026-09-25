@@ -38,7 +38,7 @@ export function SRKContact() {
               </div>
               <div className="text-left">
                 <p className="font-medium text-[#FAF8F5]">Call Us</p>
-                <p className="text-[11px] text-[#9C8C74]">{SRK_BUSINESS.phoneDisplay}</p>
+                <p className="text-xs text-[#9C8C74] font-sans tabular-nums">{SRK_BUSINESS.phoneDisplay}</p>
               </div>
             </a>
 
@@ -54,7 +54,7 @@ export function SRKContact() {
               </div>
               <div className="text-left">
                 <p className="font-medium text-[#FAF8F5]">WhatsApp</p>
-                <p className="text-[11px] text-[#9C8C74]">Chat with us instantly</p>
+                <p className="text-xs text-[#9C8C74] font-sans">Chat with us instantly</p>
               </div>
             </a>
 
@@ -70,7 +70,7 @@ export function SRKContact() {
               </div>
               <div className="text-left">
                 <p className="font-medium text-[#FAF8F5]">Visit Our Studio</p>
-                <p className="text-[11px] text-[#9C8C74]">Chelur Rd, Chintamani</p>
+                <p className="text-xs text-[#9C8C74] font-sans">Chelur Rd, Chintamani</p>
               </div>
             </a>
 
@@ -79,10 +79,9 @@ export function SRKContact() {
           {/* Right CTA Button */}
           <button
             onClick={() => setDialogOpen(true)}
-            className="px-6 py-3 bg-[#C9A84C] hover:bg-[#B89230] text-[#141311] font-medium text-xs tracking-wider uppercase rounded-full flex items-center gap-2 transition-colors shadow-sm shrink-0"
+            className="px-6 py-3 bg-[#C9A84C] hover:bg-[#B89230] text-[#141311] font-sans text-sm font-semibold tracking-[0.02em] rounded-full flex items-center gap-2 transition-colors shadow-sm shrink-0 cursor-pointer"
           >
-            <span>Book a Free Consultation</span>
-            <ArrowRight className="w-4 h-4" />
+            <span>Book Free Consultation →</span>
           </button>
 
         </div>

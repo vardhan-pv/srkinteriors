@@ -62,7 +62,7 @@ export function SRKHeader() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-xs font-sans tracking-wider uppercase text-[#D8D2C6] hover:text-[#C9A84C] transition-colors relative py-1 focus:outline-none"
+                className="font-sans text-sm font-medium tracking-[0.01em] text-[#D8D2C6] hover:text-[#C9A84C] transition-colors relative py-1 focus:outline-none"
               >
                 {item.label}
               </Link>
@@ -73,10 +73,10 @@ export function SRKHeader() {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => setDialogOpen(true)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C9A84C] text-[#141311] font-sans font-medium text-xs tracking-wider uppercase rounded-full hover:bg-[#B89230] transition-colors shadow-sm active:scale-95"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C9A84C] text-[#141311] font-sans text-sm font-semibold tracking-[0.02em] rounded-full hover:bg-[#B89230] transition-colors shadow-sm active:scale-95 cursor-pointer"
             >
-              Book a Consultation
-              <ArrowRight className="w-3.5 h-3.5" />
+              Book Free Consultation
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
@@ -84,7 +84,7 @@ export function SRKHeader() {
           <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={() => setDialogOpen(true)}
-              className="px-3 py-1.5 bg-[#C9A84C] text-[#141311] text-[11px] font-medium uppercase tracking-wider rounded-full"
+              className="px-3.5 py-1.5 bg-[#C9A84C] text-[#141311] font-sans text-xs font-semibold tracking-[0.02em] rounded-full cursor-pointer"
             >
               Consultation
             </button>

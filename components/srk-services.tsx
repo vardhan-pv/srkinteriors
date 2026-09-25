@@ -86,14 +86,14 @@ export function SRKServices() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-2.5 mb-16">
-          <div className="inline-flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+          <div className="inline-flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
             <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
             <span>WHAT WE DO</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#181713]">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-[-0.015em] text-[#181713]">
             Our Interior Design Services
           </h2>
-          <p className="text-sm sm:text-base text-[#4A4540] font-sans leading-relaxed">
+          <p className="text-[15px] sm:text-base text-[#4A4540] font-sans leading-[1.7]">
             From concept to completion, we create timeless interiors that reflect your style and elevate the way you live.
           </p>
         </div>
@@ -121,10 +121,10 @@ export function SRKServices() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <h3 className="font-serif text-lg sm:text-xl text-[#181713] font-medium group-hover:text-[#9A7A3A] transition-colors">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#181713] font-medium group-hover:text-[#9A7A3A] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs text-[#5A5448] font-sans leading-relaxed">
+                  <p className="text-sm text-[#5A5448] font-sans leading-relaxed">
                     {service.description}
                   </p>
                 </div>

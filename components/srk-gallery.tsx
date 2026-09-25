@@ -85,21 +85,20 @@ export function SRKGallery() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
               <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
               <span>FEATURED PROJECTS</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1C1B18]">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-[-0.015em] text-[#1C1B18]">
               Our Latest Projects
             </h2>
           </div>
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#9A7A3A] hover:text-[#1C1B18] transition-colors"
+            className="inline-flex items-center gap-2 font-sans text-xs sm:text-sm font-medium tracking-wide text-[#9A7A3A] hover:text-[#1C1B18] transition-colors"
           >
-            <span>View All Projects</span>
-            <ArrowRight className="w-4 h-4" />
+            <span>View All Projects ↗</span>
           </a>
         </div>
 
@@ -125,7 +124,7 @@ export function SRKGallery() {
               {/* Card Footer */}
               <div className="p-5 flex items-center justify-between border-t border-[#F2EDE4]">
                 <div>
-                  <h3 className="font-serif text-base text-[#1C1B18] font-medium line-clamp-1">{item.title}</h3>
+                  <h3 className="font-serif text-lg text-[#1C1B18] font-medium line-clamp-1">{item.title}</h3>
                   <p className="text-[10px] font-mono tracking-widest text-[#8A7A62] uppercase mt-0.5">
                     {item.category} &bull; {item.location}
                   </p>

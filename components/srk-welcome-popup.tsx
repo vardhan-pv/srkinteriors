@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -136,7 +136,7 @@ export function SRKWelcomePopup() {
                           Phone / WhatsApp <span className="text-[#C9A84C]">*</span>
                         </label>
                         <div className="flex items-center border border-[#E0D8C8] rounded-lg overflow-hidden focus-within:border-[#C9A84C] transition">
-                          <span className="flex items-center gap-1 px-3 text-sm text-[#1A1A18] border-r border-[#E0D8C8] bg-[#FAFAF8] h-10 shrink-0">
+                          <span className="flex items-center gap-1 px-3 text-sm font-sans font-medium tabular-nums text-[#1A1A18] border-r border-[#E0D8C8] bg-[#FAFAF8] h-10 shrink-0">
                             +91
                           </span>
                           <input
@@ -175,9 +175,9 @@ export function SRKWelcomePopup() {
                       </div>
                       <button
                         type="submit"
-                        className="w-full bg-[#C9A84C] hover:bg-[#B89230] text-white font-bold text-sm h-11 rounded-lg flex items-center justify-center gap-2 transition-colors tracking-wide"
+                        className="w-full bg-[#C9A84C] hover:bg-[#B89230] text-[#141311] font-sans text-sm font-semibold tracking-[0.02em] h-11 rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer"
                       >
-                        Book Free Consultation
+                        Book Free Consultation →
                       </button>
                       <p className="text-[10px] text-[#9A9080] text-center leading-relaxed">
                         By submitting, you agree to be contacted by SRK Interiors via WhatsApp or phone.

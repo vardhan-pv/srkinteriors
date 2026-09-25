@@ -40,17 +40,17 @@ export function SRKAbout() {
           {/* Right Column: Text & Alora-style Stat Counters */}
           <div className="lg:col-span-6 space-y-6">
             
-            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+            <div className="inline-flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
               <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
               <span>ABOUT US</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1C1B18] leading-tight">
-              Designing More <br />
-              <span className="italic font-light text-[#9A7A3A]">Than Just Spaces</span>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] tracking-[-0.015em] text-[#1C1B18]">
+              Spaces Designed <br />
+              <span className="italic font-light text-[#9A7A3A]">Around Real Life</span>
             </h2>
 
-            <div className="space-y-4 text-[#4A453C] font-sans text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-[#4A4540] font-sans text-[15px] sm:text-base leading-[1.7]">
               <p>
                 At <strong className="text-[#1C1B18] font-medium">SRK Interiors</strong>, led by Shariq, we believe great design has the power to transform everyday living. With a passion for aesthetics and a commitment to excellence, we create luxurious, functional spaces that feel like home.
               </p>
@@ -79,9 +79,9 @@ export function SRKAbout() {
             <div className="pt-2">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#C9A84C] text-[#141311] font-medium text-xs tracking-wider uppercase rounded-full hover:bg-[#B89230] transition-colors"
+                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#C9A84C] text-[#141311] font-sans text-sm font-semibold tracking-[0.02em] rounded-full hover:bg-[#B89230] transition-colors cursor-pointer"
               >
-                <span>Our Story</span>
+                <span>Discover Our Story</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

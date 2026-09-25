@@ -42,12 +42,12 @@ export function SRKHero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="space-y-3"
             >
-              <div className="flex items-center gap-2 text-[#8A7A62] text-xs tracking-[0.2em] uppercase font-mono font-medium">
+              <div className="flex items-center gap-2 text-[#8A7A62] text-[11px] sm:text-xs tracking-[0.18em] uppercase font-mono font-medium">
                 <MapPin className="w-3.5 h-3.5 text-[#C9A84C]" />
                 <span>Luxury Interior Design Studio • Chintamani</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#FAF8F5] leading-[1.14]">
+              <h1 className="font-serif text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-[5rem] font-normal tracking-[-0.02em] text-[#FAF8F5] leading-[0.98]">
                 Elegant Interiors <br />
                 <span className="italic font-light text-[#C9A84C]">for Modern Living</span>
               </h1>
@@ -58,7 +58,7 @@ export function SRKHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm sm:text-base text-[#D8D2C6] font-sans leading-relaxed max-w-xl"
+              className="text-[15px] sm:text-base text-[#D8D2C6] font-sans leading-[1.7] max-w-xl"
             >
               Thoughtfully designed spaces that blend beauty, comfort and functionality for a better everyday life. Executed by <strong className="text-white font-medium">Shariq &amp; Team</strong> in Chintamani, Karnataka.
             </motion.p>
@@ -73,18 +73,18 @@ export function SRKHero() {
               {/* Primary CTA */}
               <button
                 onClick={() => setDialogOpen(true)}
-                className="group px-7 py-3.5 bg-[#C9A84C] hover:bg-[#B89230] text-[#141311] font-medium text-xs tracking-wider uppercase rounded-full flex items-center gap-2.5 transition-colors active:scale-95 shadow-sm"
+                className="group px-7 py-3.5 bg-[#C9A84C] hover:bg-[#B89230] text-[#141311] font-sans text-sm font-semibold tracking-[0.02em] rounded-full flex items-center gap-2.5 transition-colors active:scale-95 shadow-sm cursor-pointer"
               >
-                <span>Book a Consultation</span>
+                <span>Book Free Consultation</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
               {/* Secondary CTA */}
               <a
                 href="#gallery"
-                className="px-6 py-3.5 border border-[#3A352F] text-[#FAF8F5] hover:border-[#C9A84C] hover:text-[#C9A84C] text-xs tracking-wider uppercase rounded-full transition-colors flex items-center gap-2"
+                className="px-6 py-3.5 border border-[#3A352F] text-[#FAF8F5] hover:border-[#C9A84C] hover:text-[#C9A84C] font-sans text-sm font-semibold tracking-[0.02em] rounded-full transition-colors flex items-center gap-2"
               >
-                <span>View Our Work</span>
+                <span>View Our Projects ↗</span>
               </a>
             </motion.div>
 
