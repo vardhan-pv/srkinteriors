@@ -85,20 +85,6 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     location: "CHINTAMANI SITE",
   },
   {
-    src: "/images1/google-work-4.jpg",
-    title: "Teak & Marble Architectural Wall Cladding",
-    category: "WALL PANELS",
-    filterGroup: "WOODWORK & DETAILS",
-    location: "CHINTAMANI SITE",
-  },
-  {
-    src: "/images1/google-work-5.jpg",
-    title: "Custom TV Console & Display Shelving",
-    category: "LIVING ROOM",
-    filterGroup: "LIVING ROOM",
-    location: "KARNATAKA SITE",
-  },
-  {
     src: "/images1/google-work-6.jpg",
     title: "Architectural Hardwood Framing & Joinery",
     category: "WOOD WORK",
@@ -152,13 +138,6 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     title: "Modern Apartment Interior Architecture",
     category: "RESIDENTIAL",
     filterGroup: "LIVING ROOM",
-    location: "CHINTAMANI SITE",
-  },
-  {
-    src: "/images1/1.jpg",
-    title: "On-Location Turnkey Construction Work",
-    category: "TURNKEY",
-    filterGroup: "WOODWORK & DETAILS",
     location: "CHINTAMANI SITE",
   },
   {
@@ -249,11 +228,10 @@ export function SRKGallery() {
                   setActiveFilter(tab);
                   setSelectedIndex(null);
                 }}
-                className={`px-4 py-2 rounded-full text-xs font-sans font-medium tracking-wider uppercase whitespace-nowrap transition-all duration-200 border cursor-pointer ${
-                  isActive
+                className={`px-4 py-2 rounded-full text-xs font-sans font-medium tracking-wider uppercase whitespace-nowrap transition-all duration-200 border cursor-pointer ${isActive
                     ? "bg-[#1C1B18] text-[#FAF8F5] border-[#1C1B18] shadow-sm"
                     : "bg-white text-[#5A5448] border-[#EAE4D8] hover:border-[#C9A84C] hover:text-[#1C1B18]"
-                }`}
+                  }`}
               >
                 {tab} ({count})
               </button>

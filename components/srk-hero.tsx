@@ -7,7 +7,8 @@ import { ArrowRight, Star, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import { SRKConsultationDialog } from "./srk-consultation-dialog";
 
-const TYPING_PHRASES = [
+const LINE1_TEXT = "Elegant Interiors";
+const PHRASES_LINE2 = [
   "for Modern Living",
   "for Luxury Villas",
   "crafted in Chintamani",
@@ -16,7 +17,7 @@ const TYPING_PHRASES = [
 
 export function SRKHero() {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [displayedText, setDisplayedText] = useState("for Modern Living");
+  const [charIndex, setCharIndex] = useState(0);
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -28,26 +29,45 @@ export function SRKHero() {
   useEffect(() => {
     if (!isMounted) return;
 
-    const currentPhrase = TYPING_PHRASES[phraseIdx % TYPING_PHRASES.length];
-    const speed = isDeleting ? 35 : 75;
+    const currentLine2Text = PHRASES_LINE2[phraseIdx % PHRASES_LINE2.length];
+    const totalLength = LINE1_TEXT.length + currentLine2Text.length;
+    const speed = isDeleting ? 30 : 65;
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
-        setDisplayedText(currentPhrase.substring(0, displayedText.length + 1));
-        if (displayedText.length + 1 === currentPhrase.length) {
-          setTimeout(() => setIsDeleting(true), 2400);
+        if (charIndex < totalLength) {
+          setCharIndex((prev) => prev + 1);
+        } else {
+          // Pause when full phrase is typed out
+          setTimeout(() => setIsDeleting(true), 2500);
         }
       } else {
-        setDisplayedText(currentPhrase.substring(0, displayedText.length - 1));
-        if (displayedText.length - 1 === 0) {
+        if (charIndex > LINE1_TEXT.length) {
+          setCharIndex((prev) => prev - 1);
+        } else {
           setIsDeleting(false);
-          setPhraseIdx((prev) => (prev + 1) % TYPING_PHRASES.length);
+          setPhraseIdx((prev) => (prev + 1) % PHRASES_LINE2.length);
         }
       }
     }, speed);
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, phraseIdx, isMounted]);
+  }, [charIndex, isDeleting, phraseIdx, isMounted]);
+
+  const currentLine2Text = PHRASES_LINE2[phraseIdx % PHRASES_LINE2.length];
+
+  const line1Typed = isMounted
+    ? LINE1_TEXT.substring(0, Math.min(charIndex, LINE1_TEXT.length))
+    : LINE1_TEXT;
+
+  const line2Typed = isMounted
+    ? charIndex > LINE1_TEXT.length
+      ? currentLine2Text.substring(0, charIndex - LINE1_TEXT.length)
+      : ""
+    : "for Modern Living";
+
+  const showCursorOnLine1 = isMounted && charIndex <= LINE1_TEXT.length;
+  const showCursorOnLine2 = isMounted && charIndex > LINE1_TEXT.length;
 
   return (
     <section id="hero" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#141311] text-[#FAF8F5]">
@@ -74,7 +94,7 @@ export function SRKHero() {
               </span>
             </motion.div>
 
-            {/* Headline with Typewriter Effect */}
+            {/* Headline with Letter-by-Letter Typewriter Effect */}
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,11 +106,19 @@ export function SRKHero() {
                 <span>Luxury Interior Design Studio • Chintamani</span>
               </div>
 
-              <h1 className="font-serif text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-[4.75rem] font-normal tracking-[-0.02em] text-[#FAF8F5] leading-[1.05] min-h-[2.2em] sm:min-h-[2.1em]">
-                Elegant Interiors <br />
-                <span className="italic font-light text-[#C9A84C] inline-flex items-center gap-1.5">
-                  <span>{displayedText}</span>
-                  <span className="inline-block w-[3px] h-[0.75em] bg-[#C9A84C] animate-cursor align-baseline" />
+              <h1 className="font-serif text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-[4.75rem] font-normal tracking-[-0.02em] text-[#FAF8F5] leading-[1.05] min-h-[2.3em] sm:min-h-[2.1em]">
+                <span className="inline-flex items-center gap-1.5">
+                  <span>{line1Typed}</span>
+                  {showCursorOnLine1 && (
+                    <span className="inline-block w-[3px] h-[0.75em] bg-[#FAF8F5] animate-cursor align-baseline" />
+                  )}
+                </span>
+                <br />
+                <span className="italic font-light text-[#C9A84C] inline-flex items-center gap-1.5 min-h-[1.1em]">
+                  <span>{line2Typed}</span>
+                  {showCursorOnLine2 && (
+                    <span className="inline-block w-[3px] h-[0.75em] bg-[#C9A84C] animate-cursor align-baseline" />
+                  )}
                 </span>
               </h1>
             </motion.div>
