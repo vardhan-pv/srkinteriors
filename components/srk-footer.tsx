@@ -17,7 +17,7 @@ export function SRKFooter() {
           
           {/* Brand & Description */}
           <div className="md:col-span-5 space-y-4">
-            <Link href="#hero" className="flex items-center gap-3 group focus:outline-none">
+            <Link href="/" className="flex items-center gap-3 group focus:outline-none">
               <SRKBrandEmblem size={38} className="text-[#C9A84C]" />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-normal tracking-wide text-[#FAF8F5] group-hover:text-[#C9A84C] transition-colors">
@@ -44,13 +44,12 @@ export function SRKFooter() {
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-mono text-xs font-medium tracking-widest text-[#C9A84C] uppercase">Quick Links</h4>
             <ul className="space-y-2 text-xs font-sans text-[#A8A296]">
-              <li><Link href="#hero" className="hover:text-[#FAF8F5] transition-colors">Home</Link></li>
-              <li><Link href="#about" className="hover:text-[#FAF8F5] transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-[#FAF8F5] transition-colors">Services</Link></li>
-              <li><Link href="#gallery" className="hover:text-[#FAF8F5] transition-colors">Projects</Link></li>
-              <li><Link href="#transformations" className="hover:text-[#FAF8F5] transition-colors">Transformations</Link></li>
-              <li><Link href="#reviews" className="hover:text-[#FAF8F5] transition-colors">Testimonials</Link></li>
-              <li><Link href="#contact" className="hover:text-[#FAF8F5] transition-colors">Contact</Link></li>
+              <li><Link href="/" className="hover:text-[#FAF8F5] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#FAF8F5] transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-[#FAF8F5] transition-colors">Services</Link></li>
+              <li><Link href="/projects" className="hover:text-[#FAF8F5] transition-colors">Projects</Link></li>
+              <li><Link href="/transformations" className="hover:text-[#FAF8F5] transition-colors">Transformations</Link></li>
+              <li><Link href="/contact" className="hover:text-[#FAF8F5] transition-colors">Contact</Link></li>
               <li><Link href="/privacy" className="hover:text-[#FAF8F5] transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>

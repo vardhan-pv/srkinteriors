@@ -22,13 +22,12 @@ export function SRKHeader() {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#hero" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Projects", href: "#gallery" },
-    { label: "Transformations", href: "#transformations" },
-    { label: "Testimonials", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Projects", href: "/projects" },
+    { label: "Transformations", href: "/transformations" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -44,7 +43,7 @@ export function SRKHeader() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Left: Brand Logo */}
-          <Link href="#hero" className="flex items-center gap-3 group focus:outline-none">
+          <Link href="/" className="flex items-center gap-3 group focus:outline-none">
             <SRKBrandEmblem size={scrolled ? 34 : 38} className="text-[#C9A84C] transition-all duration-300" />
             <div className="flex flex-col">
               <span className="font-serif text-lg sm:text-xl font-normal tracking-wide text-[#FAF8F5] group-hover:text-[#C9A84C] transition-colors">
