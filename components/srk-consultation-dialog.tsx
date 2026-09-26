@@ -148,7 +148,7 @@ export function SRKConsultationDialog({
                 </label>
                 <Input
                   required
-                  placeholder="e.g. Ramesh Reddy"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="bg-neutral-900/90 border-neutral-800 text-white rounded-none focus-visible:ring-[#C2A15B] h-11 text-sm"
@@ -162,7 +162,7 @@ export function SRKConsultationDialog({
                 <Input
                   required
                   type="tel"
-                  placeholder="+91 98765 43210"
+                  placeholder="Phone Number"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="bg-neutral-900/90 border-neutral-800 text-white rounded-none focus-visible:ring-[#C2A15B] h-11 text-sm"
@@ -194,7 +194,7 @@ export function SRKConsultationDialog({
                     Property Location
                   </label>
                   <Input
-                    placeholder="Chintamani, Kolar, etc."
+                    placeholder="Location / City"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     className="bg-neutral-900/90 border-neutral-800 text-white rounded-none focus-visible:ring-[#C2A15B] h-11 text-sm"
@@ -208,7 +208,7 @@ export function SRKConsultationDialog({
                 </label>
                 <Textarea
                   rows={2}
-                  placeholder="e.g. 3BHK flat, ready for handover next month. Interested in acrylic kitchen finish."
+                  placeholder="Project details or scope notes..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-neutral-900/90 border-neutral-800 text-white rounded-none focus-visible:ring-[#C2A15B] text-sm resize-none"

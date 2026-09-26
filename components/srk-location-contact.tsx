@@ -174,7 +174,7 @@ export function SRKLocationContact() {
                         </label>
                         <Input
                           required
-                          placeholder="Your full name"
+                          placeholder="Full Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="bg-neutral-900 border-neutral-800 text-white rounded-none h-11 text-sm focus-visible:ring-[#C2A15B]"
@@ -188,7 +188,7 @@ export function SRKLocationContact() {
                         <Input
                           required
                           type="tel"
-                          placeholder="+91 70195 49295"
+                          placeholder="Phone Number"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="bg-neutral-900 border-neutral-800 text-white rounded-none h-11 text-sm focus-visible:ring-[#C2A15B]"
@@ -221,7 +221,7 @@ export function SRKLocationContact() {
                           Property Location
                         </label>
                         <Input
-                          placeholder="Chintamani, Kolar, etc."
+                          placeholder="Location / City"
                           value={formData.location}
                           onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                           className="bg-neutral-900 border-neutral-800 text-white rounded-none h-11 text-sm focus-visible:ring-[#C2A15B]"
@@ -235,7 +235,7 @@ export function SRKLocationContact() {
                       </label>
                       <Textarea
                         rows={3}
-                        placeholder="Tell us about the property size (e.g., 1200 sq ft 3BHK, new construction, budget expectations)."
+                        placeholder="Project details or scope notes..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="bg-neutral-900 border-neutral-800 text-white rounded-none text-sm resize-none focus-visible:ring-[#C2A15B]"

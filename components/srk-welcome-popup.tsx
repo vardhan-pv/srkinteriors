@@ -125,7 +125,7 @@ export function SRKWelcomePopup() {
                         <input
                           required
                           type="text"
-                          placeholder="e.g. Ramesh Reddy"
+                          placeholder="Full Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full border border-[#E0D8C8] rounded-lg px-3 h-10 text-sm text-[#1A1A18] placeholder:text-[#A89F90] focus:outline-none focus:border-[#C9A84C] transition"
@@ -142,7 +142,7 @@ export function SRKWelcomePopup() {
                           <input
                             required
                             type="tel"
-                            placeholder="98765 43210"
+                            placeholder="Phone Number"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="flex-1 px-3 h-10 text-sm text-[#1A1A18] placeholder:text-[#A89F90] focus:outline-none bg-transparent"

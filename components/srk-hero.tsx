@@ -1,14 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { SRK_BUSINESS } from "@/lib/srk-data";
 import { ArrowRight, Star, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import { SRKConsultationDialog } from "./srk-consultation-dialog";
 
+const TYPING_PHRASES = [
+  "for Modern Living",
+  "for Luxury Villas",
+  "crafted in Chintamani",
+  "for Bespoke Spaces",
+];
+
 export function SRKHero() {
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [displayedText, setDisplayedText] = useState("for Modern Living");
+  const [phraseIdx, setPhraseIdx] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const currentPhrase = TYPING_PHRASES[phraseIdx % TYPING_PHRASES.length];
+    const speed = isDeleting ? 35 : 75;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayedText(currentPhrase.substring(0, displayedText.length + 1));
+        if (displayedText.length + 1 === currentPhrase.length) {
+          setTimeout(() => setIsDeleting(true), 2400);
+        }
+      } else {
+        setDisplayedText(currentPhrase.substring(0, displayedText.length - 1));
+        if (displayedText.length - 1 === 0) {
+          setIsDeleting(false);
+          setPhraseIdx((prev) => (prev + 1) % TYPING_PHRASES.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, phraseIdx, isMounted]);
 
   return (
     <section id="hero" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#141311] text-[#FAF8F5]">
@@ -35,7 +74,7 @@ export function SRKHero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline with Typewriter Effect */}
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -47,9 +86,12 @@ export function SRKHero() {
                 <span>Luxury Interior Design Studio • Chintamani</span>
               </div>
 
-              <h1 className="font-serif text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-[5rem] font-normal tracking-[-0.02em] text-[#FAF8F5] leading-[0.98]">
+              <h1 className="font-serif text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-[4.75rem] font-normal tracking-[-0.02em] text-[#FAF8F5] leading-[1.05] min-h-[2.2em] sm:min-h-[2.1em]">
                 Elegant Interiors <br />
-                <span className="italic font-light text-[#C9A84C]">for Modern Living</span>
+                <span className="italic font-light text-[#C9A84C] inline-flex items-center gap-1.5">
+                  <span>{displayedText}</span>
+                  <span className="inline-block w-[3px] h-[0.75em] bg-[#C9A84C] animate-cursor align-baseline" />
+                </span>
               </h1>
             </motion.div>
 

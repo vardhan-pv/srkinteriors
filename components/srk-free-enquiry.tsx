@@ -115,7 +115,7 @@ export function SRKFreeEnquiry() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. Ananya Rao"
+                    placeholder="Full Name"
                     className={`w-full bg-[#FAF8F5] border-b-2 ${
                       errors.name ? "border-rose-500" : "border-[#E0D8C8] focus:border-[#C9A84C]"
                     } px-4 py-3 text-sm text-[#1C1B18] placeholder-[#9E978C] outline-none transition-colors rounded-t-lg`}
@@ -133,7 +133,7 @@ export function SRKFreeEnquiry() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="e.g. +91 98765 43210"
+                    placeholder="Phone Number"
                     className={`w-full bg-[#FAF8F5] border-b-2 ${
                       errors.phone ? "border-rose-500" : "border-[#E0D8C8] focus:border-[#C9A84C]"
                     } px-4 py-3 text-sm text-[#1C1B18] placeholder-[#9E978C] outline-none transition-colors rounded-t-lg`}
@@ -171,7 +171,7 @@ export function SRKFreeEnquiry() {
                     rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="e.g. 1200 sqft 3BHK flat in Chintamani, planning site execution next month..."
+                    placeholder="Project details or scope notes..."
                     className="w-full bg-[#FAF8F5] border-b-2 border-[#E0D8C8] focus:border-[#C9A84C] px-4 py-3 text-sm text-[#1C1B18] placeholder-[#9E978C] outline-none transition-colors rounded-t-lg resize-none"
                   />
                 </div>
